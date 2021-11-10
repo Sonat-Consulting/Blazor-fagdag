@@ -1,0 +1,29 @@
+﻿@page "/calculator"
+
+<PageTitle>Kalkulator</PageTitle>
+
+<h1>Kalkulator</h1>
+
+<input type="number" @bind="num1" width="50" /><br />
+<input type="number" @bind="num2" /><br />
+<span>@sum</span><br />
+<button class="btn btn-primary" @onclick="Add">Legg sammen</button>
+<button class="btn btn-primary" @onclick="Multiply">multipliser</button>
+
+@code {
+    
+    private int num1 = 3;
+    private int num2 = 4;
+    private int sum;
+
+    private void Add()
+    {
+        sum = num1 + num2;
+    }
+
+    private void Multiply()
+    {
+        sum = num1 * num2;
+    }
+
+}

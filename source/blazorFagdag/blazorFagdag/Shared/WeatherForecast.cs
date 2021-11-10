@@ -1,3 +1,5 @@
+using System;
+
 namespace blazorFagdag.Shared
 {
     public class WeatherForecast
