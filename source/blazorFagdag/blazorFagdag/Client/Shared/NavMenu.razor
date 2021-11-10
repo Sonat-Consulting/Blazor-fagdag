@@ -29,11 +29,11 @@
 
 @code {
     private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    //Tips, css klassen 'collapse' kan brukes til å slå sammen menyen
+    private string? NavMenuCssClass;
 
     private void ToggleNavMenu()
     {
-        collapseNavMenu = !collapseNavMenu;
+    
     }
 }
