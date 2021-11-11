@@ -14,9 +14,11 @@ namespace blazorFagdag.Server.Controllers
     public class WeatherForecastController : ControllerBase
     {
         [HttpGet]
-        public async Task<IEnumerable<WeatherForecast>> Get()
+        public async Task<IEnumerable<WeatherForecast>> Get(double lat, double lon)
         {
-            var client = new RestClient("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.23&lon=5.19&altitude=10");
+            var latString = lat.ToString().Replace(',', '.');
+            var lonString = lon.ToString().Replace(',', '.');
+            var client = new RestClient($"https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={latString}&lon={lonString}");
             var request = new RestRequest();
             
             var response = await client.ExecuteGetAsync<YrData>(request);

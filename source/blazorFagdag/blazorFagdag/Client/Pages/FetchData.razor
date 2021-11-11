@@ -14,6 +14,7 @@
 }
 else
 {
+    <LocationSelector SelectedLocationChanged=Update/>
     <table class="table">
         <thead>
             <tr>
@@ -27,7 +28,7 @@ else
             @foreach (var forecast in forecasts)
             {
                 <tr>
-                    <td>@forecast.Date.ToString("dd/MM/yyyy HH:m:s"))</td>
+                    <td>@forecast.Date.ToString("dd/MM/yyyy HH:mm:ss")</td>
                     <td>@forecast.TemperatureC</td>
                     <td>@forecast.Summary</td>
                 </tr>
@@ -38,9 +39,13 @@ else
 
 @code {
     private WeatherForecast[]? forecasts;
-
     protected override async Task OnInitializedAsync()
     {
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
     }
+
+    private async Task Update(Location selectedLocation)
+    {
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>($"WeatherForecast?lat={selectedLocation.Latitude}&lon={selectedLocation.Longitude}");
+    } 
 }
