@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using blazorFagdag.Server.Dto;
 using blazorFagdag.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RestSharp;
 
 namespace blazorFagdag.Server.Controllers
 {
@@ -24,15 +27,25 @@ namespace blazorFagdag.Server.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<IEnumerable<WeatherForecast>> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var client = new RestClient("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.23&lon=5.19&altitude=10");
+            var request = new RestRequest();
+            
+            var response = await client.ExecuteGetAsync<YrData>(request);
+
+            YrData yr = response.Data;
+            
+            var weatherForecasts = yr.properties.timeseries.Select(timesery => new WeatherForecast
+                {
+                    Date = timesery.time,
+                    TemperatureC = timesery.data.instant.details.air_temperature,
+                    Summary = timesery.data.next_1_hours?.summary.symbol_code
+                })
+                .ToList();
+            return weatherForecasts;
         }
+        
+        
     }
 }
