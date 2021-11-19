@@ -1,4 +1,8 @@
 # Blazor-fagdag
+Her finner du Microsoft sin offisielle dokumentasjon til Blazor.
+https://docs.microsoft.com/en-gb/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-6.0
+
+
 Oppgaver: 
 1. I filen NavMenu.Razor ligger menyen, ved å bruke klassen 'collapse' gjør det mulig å slå sammen menyen.
 2. Vi trenger en komponent som kan legges til på diverse sider. Den kan ha mulighet til å ta en tittel og lenke til spørreskjemaet Tittel kan f.eks være "Hva synes du om fagdagen?"
