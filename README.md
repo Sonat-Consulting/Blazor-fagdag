@@ -5,7 +5,14 @@ https://docs.microsoft.com/en-gb/aspnet/core/blazor/?WT.mc_id=dotnet-35129-websi
 .Net Runtime og SDK:<br/>
 https://dotnet.microsoft.com/download/dotnet/6.0
 
-Oppgaver:
+## For å kjøre
+Gå til Server folder i prosjektet<br />
+`dotnet run `<br />
+
+Åpne nettleser på valgfri url i output:<br />
+`Now listening on: https://localhost:7094`$
+
+## Oppgaver:
 1. I filen NavMenu.Razor ligger menyen, ved å bruke klassen 'collapse' gjør det mulig å slå sammen menyen.
 2. Vi trenger en komponent som kan legges til på diverse sider. Den kan ha mulighet til å ta en tittel og lenke til spørreskjemaet.<br/> Tittel kan f.eks være "Hva synes du om fagdagen?"
 3. Vi må ha en enkel kalkulator, lag ett menypunkt for en enkel kalkulator med 2 input felter for multiplisering.
