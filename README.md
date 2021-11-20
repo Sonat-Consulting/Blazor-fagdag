@@ -18,7 +18,7 @@ Gå til Server folder i prosjektet
 
 ## Oppgaver
 
-1. I filen NavMenu.Razor ligger menyen, ved å bruke klassen 'collapse' gjør det mulig å slå sammen menyen.
+1. I filen NavMenu.Razor ligger menyen. I denne oppgaven skal du bruke Mobil-skjerm. Åpne developer tools og velg mobilskjerm-format. Da blir hamburger-menyen synlig. Ved å bruke klassen 'collapse' skal du implementere åpning og lukking av menyen.
 2. Vi trenger en komponent som kan legges til på diverse sider. Den kan ha mulighet til å ta en tittel og lenke til spørreskjemaet. Tittel kan f.eks være "Hva synes du om fagdagen?"
 3. Vi må ha en enkel kalkulator, lag et menypunkt for en enkel kalkulator med 2 input felter, og to knapper som enten summerer eller multipliserer verdiene i input feltene. Vis resultatet under knappene.
 4. På weatherforecast trenger vi værdata fra Yr.no.
