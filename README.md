@@ -31,6 +31,6 @@ Gå til Server folder i prosjektet
 5. Siden det er vanskelig å huske lengde og breddegrader trenger vi en komponent hvor de største byene i Norge er lagt inn. Da kan vi heller velge by fra en dropdown eller lignende.
 6. Hvis du er uheldig/trykker feil og velger å se været i Oslo ønsker du gjerne å nullstille listen med værdata. Da kan vi legge på en knapp for å nullstille listen. Før vi nullstiller kan vi vise en javascript confirm dialog for å være sikker på at vi skal nullstille (<https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm>).
 
-   Lag en knapp med en onclick metode som bruker IJSRuntime for å kjøre javascript. Vis en confirm dialog, og fjern listen med værdata dersom resultatet er true/ja/ok/confirm.
+   Lag en knapp med en onclick metode som bruker IJSRuntime for å kjøre javascript. Vis en confirm dialog, og fjern listen med værdata dersom resultatet er true/ja/ok/confirm. Her er litt dokumentasjon om IJSRuntime - <https://docs.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/call-javascript-from-dotnet?view=aspnetcore-6.0>
 
 7. Ekstra, legg til autentisering?
