@@ -26,5 +26,7 @@ Gå til Server folder i prosjektet
 
    <https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={latString}&lon={lonString}>
 
+   Det ligger en WeatherForecastController i blazorFagdag.Server prosjektet. Implementer en HTTP GET metode i kontrolleren som tar inn lattitude og longitude og returnerer en liste av WeatherForecast til klienten.
+
 5. Siden det er vanskelig å huske lengde og breddegrader trenger vi en komponent hvor de største byene i Norge er lagt inn. Da kan vi heller velge by fra en dropdown eller lignende.
 6. Ekstra, legg til autentisering?
