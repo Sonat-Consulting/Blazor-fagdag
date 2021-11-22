@@ -28,6 +28,8 @@ Gå til Server folder i prosjektet
 
    Det ligger en WeatherForecastController i blazorFagdag.Server prosjektet. Implementer en HTTP GET metode i kontrolleren som tar inn lattitude og longitude og returnerer en liste av WeatherForecast til klienten.
 
+DTO til yr dataene finner du i DTO mappen. Tips er å bruke JsonConvert til serialisering/deserialisering
+
 5. Siden det er vanskelig å huske lengde og breddegrader trenger vi en komponent hvor de største byene i Norge er lagt inn. Da kan vi heller velge by fra en dropdown eller lignende.
 6. Hvis du er uheldig/trykker feil og velger å se været i Oslo ønsker du gjerne å nullstille listen med værdata. Da kan vi legge på en knapp for å nullstille listen. Før vi nullstiller kan vi vise en javascript confirm dialog for å være sikker på at vi skal nullstille (<https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm>).
 
