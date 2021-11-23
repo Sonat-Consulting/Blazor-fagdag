@@ -29,7 +29,7 @@ Guiden nevner hva og hvor man skal legge inn Google OAuth 2.0 OIDC informasjon i
   - Gi client'en et navn (for eksempel Blazor fagdag)
   - Under "Authorised JavaScript origins" legger jeg inn `https://localhost:7042` - hentet fra `launchSettings.json` i det nye prosjektet jeg opprettet. Det er denne URL'en Blazor appen kjører på.
   - Under "Authorised redirect URIs" legger jeg inn `https://localhost:7042/authentication/login-callback`.
-  - Jeg trykker "Create" og får opprettet en Client ID. Denne legger jeg inn i appsettings.Development slik som dokumentasjonen til Microsoft viser eksempel på (under "Google OAuth 2.0 OIDC example").
+  - Jeg trykker "Create" og får opprettet en Client ID. Denne legger jeg inn i `appsettings.Development.json` slik som dokumentasjonen til Microsoft viser eksempel på (under "Google OAuth 2.0 OIDC example").
 
 - Nå skal du kunne logge inn med din Google konto i din nye Blazor app
 
