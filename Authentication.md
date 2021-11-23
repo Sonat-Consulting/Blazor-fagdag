@@ -34,3 +34,23 @@ Guiden nevner hva og hvor man skal legge inn Google OAuth 2.0 OIDC informasjon i
 - Nå skal du kunne logge inn med din Google konto i din nye Blazor app
 
 Les gjennom dokumentasjonen til Microsoft for å få en gjennomgang av hvordan dette fungerer. Videre kan man eksperimentere med `<AuthorizeView>` og lignende for å lage ruter som for eksempel kun vises for innloggede brukere. Ler mer her: <https://docs.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0>
+
+Eksempel på en enkel Blazor side som viser forskjellig innhold basert på om man er innlogget eller ikke:
+
+```
+@page "/private"
+
+<AuthorizeView>
+    <Authorized>
+        <h1>Hello, @context.User.Identity.Name!</h1>
+        <p>You can only see this content if you're authenticated.</p>
+    </Authorized>
+    <NotAuthorized>
+        <a href="authentication/login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+
+}
+```
