@@ -33,4 +33,4 @@ Gå til Server folder i prosjektet
 
    Lag en knapp med en onclick metode som bruker IJSRuntime for å kjøre javascript. Vis en confirm dialog, og fjern listen med værdata dersom resultatet er true/ja/ok/confirm. Her er litt dokumentasjon om IJSRuntime - <https://docs.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/call-javascript-from-dotnet?view=aspnetcore-6.0>
 
-7. Ekstra, legg til autentisering?
+7. [Autentisering](/Authentication.md)
