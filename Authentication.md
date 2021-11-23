@@ -54,3 +54,5 @@ Eksempel på en enkel Blazor side som viser forskjellig innhold basert på om ma
 
 }
 ```
+
+Prøv å gjøre menyen dynamisk, slik at menypunktet for å komme til `/private` kun vises når man er innlogget.
